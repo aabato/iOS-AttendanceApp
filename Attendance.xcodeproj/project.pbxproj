@@ -1,0 +1,521 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BDB191D81C6E4AE50057200D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BDB191D71C6E4AE50057200D /* main.m */; };
+		BDB191DB1C6E4AE50057200D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BDB191DA1C6E4AE50057200D /* AppDelegate.m */; };
+		BDB191DE1C6E4AE50057200D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDB191DD1C6E4AE50057200D /* ViewController.m */; };
+		BDB191E11C6E4AE50057200D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDB191DF1C6E4AE50057200D /* Main.storyboard */; };
+		BDB191E31C6E4AE50057200D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDB191E21C6E4AE50057200D /* Assets.xcassets */; };
+		BDB191E61C6E4AE50057200D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDB191E41C6E4AE50057200D /* LaunchScreen.storyboard */; };
+		BDB191F11C6E4AE50057200D /* AttendanceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BDB191F01C6E4AE50057200D /* AttendanceTests.m */; };
+		BDB191FC1C6E4AE50057200D /* AttendanceUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = BDB191FB1C6E4AE50057200D /* AttendanceUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BDB191ED1C6E4AE50057200D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BDB191CB1C6E4AE50057200D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BDB191D21C6E4AE50057200D;
+			remoteInfo = Attendance;
+		};
+		BDB191F81C6E4AE50057200D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BDB191CB1C6E4AE50057200D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BDB191D21C6E4AE50057200D;
+			remoteInfo = Attendance;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		BDB191D31C6E4AE50057200D /* Attendance.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Attendance.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BDB191D71C6E4AE50057200D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		BDB191D91C6E4AE50057200D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		BDB191DA1C6E4AE50057200D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		BDB191DC1C6E4AE50057200D /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		BDB191DD1C6E4AE50057200D /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		BDB191E01C6E4AE50057200D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BDB191E21C6E4AE50057200D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BDB191E51C6E4AE50057200D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BDB191E71C6E4AE50057200D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BDB191EC1C6E4AE50057200D /* AttendanceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AttendanceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BDB191F01C6E4AE50057200D /* AttendanceTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AttendanceTests.m; sourceTree = "<group>"; };
+		BDB191F21C6E4AE50057200D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BDB191F71C6E4AE50057200D /* AttendanceUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AttendanceUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BDB191FB1C6E4AE50057200D /* AttendanceUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AttendanceUITests.m; sourceTree = "<group>"; };
+		BDB191FD1C6E4AE50057200D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BDB191D01C6E4AE50057200D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BDB191E91C6E4AE50057200D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BDB191F41C6E4AE50057200D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BDB191CA1C6E4AE50057200D = {
+			isa = PBXGroup;
+			children = (
+				BDB191D51C6E4AE50057200D /* Attendance */,
+				BDB191EF1C6E4AE50057200D /* AttendanceTests */,
+				BDB191FA1C6E4AE50057200D /* AttendanceUITests */,
+				BDB191D41C6E4AE50057200D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BDB191D41C6E4AE50057200D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BDB191D31C6E4AE50057200D /* Attendance.app */,
+				BDB191EC1C6E4AE50057200D /* AttendanceTests.xctest */,
+				BDB191F71C6E4AE50057200D /* AttendanceUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BDB191D51C6E4AE50057200D /* Attendance */ = {
+			isa = PBXGroup;
+			children = (
+				BDB191D91C6E4AE50057200D /* AppDelegate.h */,
+				BDB191DA1C6E4AE50057200D /* AppDelegate.m */,
+				BDB191DC1C6E4AE50057200D /* ViewController.h */,
+				BDB191DD1C6E4AE50057200D /* ViewController.m */,
+				BDB191DF1C6E4AE50057200D /* Main.storyboard */,
+				BDB191E21C6E4AE50057200D /* Assets.xcassets */,
+				BDB191E41C6E4AE50057200D /* LaunchScreen.storyboard */,
+				BDB191E71C6E4AE50057200D /* Info.plist */,
+				BDB191D61C6E4AE50057200D /* Supporting Files */,
+			);
+			path = Attendance;
+			sourceTree = "<group>";
+		};
+		BDB191D61C6E4AE50057200D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BDB191D71C6E4AE50057200D /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BDB191EF1C6E4AE50057200D /* AttendanceTests */ = {
+			isa = PBXGroup;
+			children = (
+				BDB191F01C6E4AE50057200D /* AttendanceTests.m */,
+				BDB191F21C6E4AE50057200D /* Info.plist */,
+			);
+			path = AttendanceTests;
+			sourceTree = "<group>";
+		};
+		BDB191FA1C6E4AE50057200D /* AttendanceUITests */ = {
+			isa = PBXGroup;
+			children = (
+				BDB191FB1C6E4AE50057200D /* AttendanceUITests.m */,
+				BDB191FD1C6E4AE50057200D /* Info.plist */,
+			);
+			path = AttendanceUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BDB191D21C6E4AE50057200D /* Attendance */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BDB192001C6E4AE50057200D /* Build configuration list for PBXNativeTarget "Attendance" */;
+			buildPhases = (
+				BDB191CF1C6E4AE50057200D /* Sources */,
+				BDB191D01C6E4AE50057200D /* Frameworks */,
+				BDB191D11C6E4AE50057200D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Attendance;
+			productName = Attendance;
+			productReference = BDB191D31C6E4AE50057200D /* Attendance.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BDB191EB1C6E4AE50057200D /* AttendanceTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BDB192031C6E4AE50057200D /* Build configuration list for PBXNativeTarget "AttendanceTests" */;
+			buildPhases = (
+				BDB191E81C6E4AE50057200D /* Sources */,
+				BDB191E91C6E4AE50057200D /* Frameworks */,
+				BDB191EA1C6E4AE50057200D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BDB191EE1C6E4AE50057200D /* PBXTargetDependency */,
+			);
+			name = AttendanceTests;
+			productName = AttendanceTests;
+			productReference = BDB191EC1C6E4AE50057200D /* AttendanceTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		BDB191F61C6E4AE50057200D /* AttendanceUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BDB192061C6E4AE50057200D /* Build configuration list for PBXNativeTarget "AttendanceUITests" */;
+			buildPhases = (
+				BDB191F31C6E4AE50057200D /* Sources */,
+				BDB191F41C6E4AE50057200D /* Frameworks */,
+				BDB191F51C6E4AE50057200D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BDB191F91C6E4AE50057200D /* PBXTargetDependency */,
+			);
+			name = AttendanceUITests;
+			productName = AttendanceUITests;
+			productReference = BDB191F71C6E4AE50057200D /* AttendanceUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BDB191CB1C6E4AE50057200D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "Angelica Bato";
+				TargetAttributes = {
+					BDB191D21C6E4AE50057200D = {
+						CreatedOnToolsVersion = 7.2.1;
+					};
+					BDB191EB1C6E4AE50057200D = {
+						CreatedOnToolsVersion = 7.2.1;
+						TestTargetID = BDB191D21C6E4AE50057200D;
+					};
+					BDB191F61C6E4AE50057200D = {
+						CreatedOnToolsVersion = 7.2.1;
+						TestTargetID = BDB191D21C6E4AE50057200D;
+					};
+				};
+			};
+			buildConfigurationList = BDB191CE1C6E4AE50057200D /* Build configuration list for PBXProject "Attendance" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BDB191CA1C6E4AE50057200D;
+			productRefGroup = BDB191D41C6E4AE50057200D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BDB191D21C6E4AE50057200D /* Attendance */,
+				BDB191EB1C6E4AE50057200D /* AttendanceTests */,
+				BDB191F61C6E4AE50057200D /* AttendanceUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BDB191D11C6E4AE50057200D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BDB191E61C6E4AE50057200D /* LaunchScreen.storyboard in Resources */,
+				BDB191E31C6E4AE50057200D /* Assets.xcassets in Resources */,
+				BDB191E11C6E4AE50057200D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BDB191EA1C6E4AE50057200D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BDB191F51C6E4AE50057200D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BDB191CF1C6E4AE50057200D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BDB191DE1C6E4AE50057200D /* ViewController.m in Sources */,
+				BDB191DB1C6E4AE50057200D /* AppDelegate.m in Sources */,
+				BDB191D81C6E4AE50057200D /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BDB191E81C6E4AE50057200D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BDB191F11C6E4AE50057200D /* AttendanceTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BDB191F31C6E4AE50057200D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BDB191FC1C6E4AE50057200D /* AttendanceUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BDB191EE1C6E4AE50057200D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BDB191D21C6E4AE50057200D /* Attendance */;
+			targetProxy = BDB191ED1C6E4AE50057200D /* PBXContainerItemProxy */;
+		};
+		BDB191F91C6E4AE50057200D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BDB191D21C6E4AE50057200D /* Attendance */;
+			targetProxy = BDB191F81C6E4AE50057200D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BDB191DF1C6E4AE50057200D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BDB191E01C6E4AE50057200D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		BDB191E41C6E4AE50057200D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BDB191E51C6E4AE50057200D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BDB191FE1C6E4AE50057200D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BDB191FF1C6E4AE50057200D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BDB192011C6E4AE50057200D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Attendance/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = edu.self.Attendance;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		BDB192021C6E4AE50057200D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Attendance/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = edu.self.Attendance;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		BDB192041C6E4AE50057200D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = AttendanceTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = edu.self.AttendanceTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Attendance.app/Attendance";
+			};
+			name = Debug;
+		};
+		BDB192051C6E4AE50057200D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = AttendanceTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = edu.self.AttendanceTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Attendance.app/Attendance";
+			};
+			name = Release;
+		};
+		BDB192071C6E4AE50057200D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = AttendanceUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = edu.self.AttendanceUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Attendance;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		BDB192081C6E4AE50057200D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = AttendanceUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = edu.self.AttendanceUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Attendance;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BDB191CE1C6E4AE50057200D /* Build configuration list for PBXProject "Attendance" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BDB191FE1C6E4AE50057200D /* Debug */,
+				BDB191FF1C6E4AE50057200D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BDB192001C6E4AE50057200D /* Build configuration list for PBXNativeTarget "Attendance" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BDB192011C6E4AE50057200D /* Debug */,
+				BDB192021C6E4AE50057200D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		BDB192031C6E4AE50057200D /* Build configuration list for PBXNativeTarget "AttendanceTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BDB192041C6E4AE50057200D /* Debug */,
+				BDB192051C6E4AE50057200D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		BDB192061C6E4AE50057200D /* Build configuration list for PBXNativeTarget "AttendanceUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BDB192071C6E4AE50057200D /* Debug */,
+				BDB192081C6E4AE50057200D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BDB191CB1C6E4AE50057200D /* Project object */;
+}
