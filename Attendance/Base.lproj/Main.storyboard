@@ -46,7 +46,7 @@
         <!--View Controller-->
         <scene sceneID="C0t-lY-bdp">
             <objects>
-                <viewController id="VML-06-887" sceneMemberID="viewController">
+                <viewController id="VML-06-887" customClass="QRViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="mBY-3I-yne"/>
                         <viewControllerLayoutGuide type="bottom" id="9an-1t-3AZ"/>
@@ -58,14 +58,14 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="QR CODESSZZZ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OSq-1G-7pl">
                                 <rect key="frame" x="180" y="419" width="370" height="68"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kO9-CP-3Xw">
                                 <rect key="frame" x="309" y="715" width="173" height="49"/>
                                 <state key="normal" title="Go back"/>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="presentation" id="ndk-T1-RJW"/>
+                                    <action selector="goBackButtonTapped:" destination="VML-06-887" eventType="touchUpInside" id="GMW-6t-jE7"/>
                                 </connections>
                             </button>
                         </subviews>

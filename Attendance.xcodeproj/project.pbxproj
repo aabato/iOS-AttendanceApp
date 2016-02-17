@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BD38A79B1C75196F0093AE32 /* QRViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD38A79A1C75196F0093AE32 /* QRViewController.m */; };
 		BDB191D81C6E4AE50057200D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BDB191D71C6E4AE50057200D /* main.m */; };
 		BDB191DB1C6E4AE50057200D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BDB191DA1C6E4AE50057200D /* AppDelegate.m */; };
 		BDB191DE1C6E4AE50057200D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDB191DD1C6E4AE50057200D /* ViewController.m */; };
@@ -35,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BD38A7991C75196F0093AE32 /* QRViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRViewController.h; sourceTree = "<group>"; };
+		BD38A79A1C75196F0093AE32 /* QRViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRViewController.m; sourceTree = "<group>"; };
 		BDB191D31C6E4AE50057200D /* Attendance.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Attendance.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDB191D71C6E4AE50057200D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		BDB191D91C6E4AE50057200D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -105,6 +108,8 @@
 				BDB191DA1C6E4AE50057200D /* AppDelegate.m */,
 				BDB191DC1C6E4AE50057200D /* ViewController.h */,
 				BDB191DD1C6E4AE50057200D /* ViewController.m */,
+				BD38A7991C75196F0093AE32 /* QRViewController.h */,
+				BD38A79A1C75196F0093AE32 /* QRViewController.m */,
 				BDB191DF1C6E4AE50057200D /* Main.storyboard */,
 				BDB191E21C6E4AE50057200D /* Assets.xcassets */,
 				BDB191E41C6E4AE50057200D /* LaunchScreen.storyboard */,
@@ -273,6 +278,7 @@
 				BDB191DE1C6E4AE50057200D /* ViewController.m in Sources */,
 				BDB191DB1C6E4AE50057200D /* AppDelegate.m in Sources */,
 				BDB191D81C6E4AE50057200D /* main.m in Sources */,
+				BD38A79B1C75196F0093AE32 /* QRViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -498,6 +504,7 @@
 				BDB192021C6E4AE50057200D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BDB192031C6E4AE50057200D /* Build configuration list for PBXNativeTarget "AttendanceTests" */ = {
 			isa = XCConfigurationList;
@@ -506,6 +513,7 @@
 				BDB192051C6E4AE50057200D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BDB192061C6E4AE50057200D /* Build configuration list for PBXNativeTarget "AttendanceUITests" */ = {
 			isa = XCConfigurationList;
@@ -514,6 +522,7 @@
 				BDB192081C6E4AE50057200D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
