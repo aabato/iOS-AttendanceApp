@@ -7,10 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BD38A79B1C75196F0093AE32 /* QRViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD38A79A1C75196F0093AE32 /* QRViewController.m */; };
+		BD91819C1C775F630060F711 /* FISConfirmationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD9181971C775F630060F711 /* FISConfirmationViewController.m */; };
+		BD91819D1C775F630060F711 /* FISStudent.m in Sources */ = {isa = PBXBuildFile; fileRef = BD9181991C775F630060F711 /* FISStudent.m */; };
+		BD91819E1C775F630060F711 /* FISStudentsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD91819B1C775F630060F711 /* FISStudentsTableViewController.m */; };
 		BDB191D81C6E4AE50057200D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BDB191D71C6E4AE50057200D /* main.m */; };
 		BDB191DB1C6E4AE50057200D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BDB191DA1C6E4AE50057200D /* AppDelegate.m */; };
-		BDB191DE1C6E4AE50057200D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDB191DD1C6E4AE50057200D /* ViewController.m */; };
 		BDB191E11C6E4AE50057200D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDB191DF1C6E4AE50057200D /* Main.storyboard */; };
 		BDB191E31C6E4AE50057200D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDB191E21C6E4AE50057200D /* Assets.xcassets */; };
 		BDB191E61C6E4AE50057200D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDB191E41C6E4AE50057200D /* LaunchScreen.storyboard */; };
@@ -36,14 +37,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		BD38A7991C75196F0093AE32 /* QRViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRViewController.h; sourceTree = "<group>"; };
-		BD38A79A1C75196F0093AE32 /* QRViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRViewController.m; sourceTree = "<group>"; };
+		BD9181961C775F630060F711 /* FISConfirmationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FISConfirmationViewController.h; sourceTree = "<group>"; };
+		BD9181971C775F630060F711 /* FISConfirmationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FISConfirmationViewController.m; sourceTree = "<group>"; };
+		BD9181981C775F630060F711 /* FISStudent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FISStudent.h; sourceTree = "<group>"; };
+		BD9181991C775F630060F711 /* FISStudent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FISStudent.m; sourceTree = "<group>"; };
+		BD91819A1C775F630060F711 /* FISStudentsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FISStudentsTableViewController.h; sourceTree = "<group>"; };
+		BD91819B1C775F630060F711 /* FISStudentsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FISStudentsTableViewController.m; sourceTree = "<group>"; };
 		BDB191D31C6E4AE50057200D /* Attendance.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Attendance.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDB191D71C6E4AE50057200D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		BDB191D91C6E4AE50057200D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		BDB191DA1C6E4AE50057200D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		BDB191DC1C6E4AE50057200D /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		BDB191DD1C6E4AE50057200D /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		BDB191E01C6E4AE50057200D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BDB191E21C6E4AE50057200D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BDB191E51C6E4AE50057200D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -104,12 +107,14 @@
 		BDB191D51C6E4AE50057200D /* Attendance */ = {
 			isa = PBXGroup;
 			children = (
+				BD9181961C775F630060F711 /* FISConfirmationViewController.h */,
+				BD9181971C775F630060F711 /* FISConfirmationViewController.m */,
+				BD9181981C775F630060F711 /* FISStudent.h */,
+				BD9181991C775F630060F711 /* FISStudent.m */,
+				BD91819A1C775F630060F711 /* FISStudentsTableViewController.h */,
+				BD91819B1C775F630060F711 /* FISStudentsTableViewController.m */,
 				BDB191D91C6E4AE50057200D /* AppDelegate.h */,
 				BDB191DA1C6E4AE50057200D /* AppDelegate.m */,
-				BDB191DC1C6E4AE50057200D /* ViewController.h */,
-				BDB191DD1C6E4AE50057200D /* ViewController.m */,
-				BD38A7991C75196F0093AE32 /* QRViewController.h */,
-				BD38A79A1C75196F0093AE32 /* QRViewController.m */,
 				BDB191DF1C6E4AE50057200D /* Main.storyboard */,
 				BDB191E21C6E4AE50057200D /* Assets.xcassets */,
 				BDB191E41C6E4AE50057200D /* LaunchScreen.storyboard */,
@@ -275,10 +280,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BDB191DE1C6E4AE50057200D /* ViewController.m in Sources */,
 				BDB191DB1C6E4AE50057200D /* AppDelegate.m in Sources */,
 				BDB191D81C6E4AE50057200D /* main.m in Sources */,
-				BD38A79B1C75196F0093AE32 /* QRViewController.m in Sources */,
+				BD91819E1C775F630060F711 /* FISStudentsTableViewController.m in Sources */,
+				BD91819D1C775F630060F711 /* FISStudent.m in Sources */,
+				BD91819C1C775F630060F711 /* FISConfirmationViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
