@@ -66,6 +66,7 @@
     return cell;
 }
 
+
 /*
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -105,12 +106,16 @@
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue
                  sender:(UITableViewCell *)sender {
+    
     FISConfirmationViewController *destinationViewController = segue.destinationViewController;
     
     NSIndexPath *indexPathOfPressedRow = self.tableView.indexPathForSelectedRow;
     FISStudent *studentAtPressedRow = self.students[indexPathOfPressedRow.row];
     
     destinationViewController.firstNameOfSignedInStudent = studentAtPressedRow.firstName;
+    
+    [self.students removeObject:studentAtPressedRow];
+    [self.tableView deleteRowsAtIndexPaths:@[indexPathOfPressedRow] withRowAnimation:UITableViewRowAnimationRight];
 }
 
 @end
