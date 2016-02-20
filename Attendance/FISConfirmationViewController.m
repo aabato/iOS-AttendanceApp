@@ -31,11 +31,6 @@
     self.timeLabel.text = [NSString stringWithFormat:@"You signed in at %@", formattedDateString];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 /*
 #pragma mark - Navigation
 

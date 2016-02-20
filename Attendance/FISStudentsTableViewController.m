@@ -15,8 +15,11 @@
 @implementation FISStudentsTableViewController
 
 - (void)viewDidLoad {
+    
+    if (self.viewDidLoadCount != 1) {
     [super viewDidLoad];
     self.students = [NSMutableArray new];
+    self.signedInStudents = [NSMutableArray new];
     
     FISStudent *angelica = [[FISStudent alloc] initWithFirstName:@"Angelica"
                                                         lastName:@"Bato"];
@@ -34,17 +37,13 @@
     [self.students addObject:ariel];
     [self.students addObject:rodrigo];
     [self.students addObject:felix];
+    }
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 #pragma mark - Table view data source
@@ -103,19 +102,27 @@
 
 #pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue
-                 sender:(UITableViewCell *)sender {
+                 sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"confirmationSegue"]) {
     
     FISConfirmationViewController *destinationViewController = segue.destinationViewController;
     
     NSIndexPath *indexPathOfPressedRow = self.tableView.indexPathForSelectedRow;
     FISStudent *studentAtPressedRow = self.students[indexPathOfPressedRow.row];
+    studentAtPressedRow.isSignedIn = YES;
     
     destinationViewController.firstNameOfSignedInStudent = studentAtPressedRow.firstName;
     
+    [self.signedInStudents addObject:studentAtPressedRow];
     [self.students removeObject:studentAtPressedRow];
     [self.tableView deleteRowsAtIndexPaths:@[indexPathOfPressedRow] withRowAnimation:UITableViewRowAnimationRight];
+    }
+    else {
+        FISLoginViewController *destinationViewController = segue.destinationViewController;
+        destinationViewController.signedInStudents = self.signedInStudents;
+        destinationViewController.students = self.students;
+    }
 }
 
 @end

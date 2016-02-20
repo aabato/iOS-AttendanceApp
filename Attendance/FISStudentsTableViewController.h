@@ -9,9 +9,12 @@
 #import <UIKit/UIKit.h>
 #import "FISStudent.h"
 #import "FISConfirmationViewController.h"
+#import "FISLoginViewController.h"
 
 @interface FISStudentsTableViewController : UITableViewController
 
 @property (strong, nonatomic) NSMutableArray *students;
+@property (strong, nonatomic) NSMutableArray *signedInStudents;
+@property NSUInteger viewDidLoadCount;
 
 @end

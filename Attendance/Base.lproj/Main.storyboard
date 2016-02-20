@@ -5,24 +5,145 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
     </dependencies>
     <scenes>
-        <!--Root View Controller-->
+        <!--Login View Controller-->
+        <scene sceneID="jst-Ol-hN9">
+            <objects>
+                <viewController id="OKB-iy-u5M" customClass="FISLoginViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="nQg-0g-sfa"/>
+                        <viewControllerLayoutGuide type="bottom" id="kvC-nN-nrM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3wB-ur-CbY">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Please enter the password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Mzz-sw-09o">
+                                <rect key="frame" x="28" y="101" width="493" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Password:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="msM-gd-1sd">
+                                <rect key="frame" x="28" y="72" width="132" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8vJ-hG-5rJ">
+                                <rect key="frame" x="28" y="164" width="69" height="30"/>
+                                <state key="normal" title="Sign In"/>
+                                <connections>
+                                    <action selector="signInWasTapped:" destination="OKB-iy-u5M" eventType="touchUpInside" id="302-N7-3Rk"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Please try again." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tHr-US-Dkx">
+                                <rect key="frame" x="28" y="210" width="317" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PZY-QR-znr">
+                                <rect key="frame" x="-14" y="0.0" width="768" height="44"/>
+                                <items>
+                                    <navigationItem id="A8G-vg-pwl">
+                                        <barButtonItem key="leftBarButtonItem" title="Go Back" id="xU7-mU-T6E">
+                                            <connections>
+                                                <action selector="goBackButtonWasTapped:" destination="OKB-iy-u5M" id="PxL-PA-FZE"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="passwordTextField" destination="Mzz-sw-09o" id="xAf-7b-mhy"/>
+                        <outlet property="pleaseTryAgainLabel" destination="tHr-US-Dkx" id="4bu-h1-zL6"/>
+                        <segue destination="dtd-3M-c7n" kind="presentation" identifier="loginToDataSegue" id="8S7-gg-7z0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nDL-3n-Gz8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="658" y="-773"/>
+        </scene>
+        <!--Data Table View Controller-->
+        <scene sceneID="TpC-Q9-gVQ">
+            <objects>
+                <tableViewController id="dtd-3M-c7n" customClass="FISDataTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="rNQ-vg-T9h">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <navigationBar key="tableHeaderView" contentMode="scaleToFill" id="yXX-WZ-MdI">
+                            <rect key="frame" x="0.0" y="0.0" width="768" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <items>
+                                <navigationItem id="iYr-Fo-4zI">
+                                    <barButtonItem key="leftBarButtonItem" title="Sign In" id="ATA-OL-6Vx">
+                                        <connections>
+                                            <action selector="signInButtonWasTapped:" destination="dtd-3M-c7n" id="zxl-R1-hK1"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </navigationItem>
+                            </items>
+                        </navigationBar>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="dataCell" textLabel="gKm-z9-vRP" detailTextLabel="KlN-5s-upH" style="IBUITableViewCellStyleValue1" id="NbP-BB-Qli">
+                                <rect key="frame" x="0.0" y="72" width="768" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NbP-BB-Qli" id="7Pl-1Z-cdK">
+                                    <rect key="frame" x="0.0" y="0.0" width="768" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="gKm-z9-vRP">
+                                            <rect key="frame" x="68" y="12" width="32" height="20"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="KlN-5s-upH">
+                                            <rect key="frame" x="658" y="12" width="42" height="20"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="dtd-3M-c7n" id="I3K-Qk-xWr"/>
+                            <outlet property="delegate" destination="dtd-3M-c7n" id="s38-EV-X3t"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <segue destination="Jhv-46-wEv" kind="show" identifier="dataToSignInSegue" id="vKk-ld-V2U"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wEC-uE-jY4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1633" y="-773"/>
+        </scene>
+        <!--Sign In View Controller-->
         <scene sceneID="WqI-kX-3du">
             <objects>
-                <tableViewController id="Jhv-46-wEv" customClass="FISStudentsTableViewController" sceneMemberID="viewController">
+                <tableViewController id="Jhv-46-wEv" userLabel="Sign In View Controller" customClass="FISStudentsTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="oAE-2e-Np7">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="basicCell" id="Wlh-bd-n8l">
-                                <rect key="frame" x="0.0" y="92" width="768" height="44"/>
+                                <rect key="frame" x="0.0" y="28" width="768" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Wlh-bd-n8l" id="ubk-mz-Goa">
-                                    <rect key="frame" x="0.0" y="0.0" width="768" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="768" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="OQE-ba-l7i" kind="show" id="MoH-Kt-qoz"/>
+                                    <segue destination="OQE-ba-l7i" kind="show" identifier="confirmationSegue" id="V4M-iw-fIL"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -31,12 +152,18 @@
                             <outlet property="delegate" destination="Jhv-46-wEv" id="NkD-9Q-AeV"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="KRN-WL-B2a"/>
+                    <navigationItem key="navigationItem" title="Sign In" id="9pD-LI-wN5">
+                        <barButtonItem key="rightBarButtonItem" title="Log In" id="Dij-Mb-EOw">
+                            <connections>
+                                <segue destination="OKB-iy-u5M" kind="presentation" identifier="loginSegue" id="zhR-nn-Ac4"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nsc-r8-IPh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1472" y="447"/>
+            <point key="canvasLocation" x="1026" y="447"/>
         </scene>
         <!--Confirmation View Controller-->
         <scene sceneID="gIc-p4-2Vi">
@@ -73,7 +200,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dEv-Js-Rjc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2357" y="447"/>
+            <point key="canvasLocation" x="1947" y="471"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="FGq-FH-wEb">
@@ -92,4 +219,7 @@
             <point key="canvasLocation" x="164" y="447"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="vKk-ld-V2U"/>
+    </inferredMetricsTieBreakers>
 </document>
