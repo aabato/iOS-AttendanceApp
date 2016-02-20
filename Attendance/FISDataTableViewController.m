@@ -25,7 +25,8 @@
 }
 
 - (IBAction)signInButtonWasTapped:(UIBarButtonItem *)sender {
-    [self performSegueWithIdentifier:@"dataToSignInSegue" sender:nil];
+    [self performSegueWithIdentifier:@"dataToSignInSegue"
+                              sender:nil];
 }
 
 #pragma mark - Table view data source

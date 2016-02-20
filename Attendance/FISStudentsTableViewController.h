@@ -17,4 +17,8 @@
 @property (strong, nonatomic) NSMutableArray *signedInStudents;
 @property NSUInteger viewDidLoadCount;
 
+#pragma mark - Helper Methods
+
+- (void)sortStudentsByFirstName:(NSMutableArray *)students;
+
 @end

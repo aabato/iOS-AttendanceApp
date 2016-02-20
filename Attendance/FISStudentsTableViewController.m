@@ -33,10 +33,20 @@
     FISStudent *felix = [[FISStudent alloc] initWithFirstName:@"Felix"
                                                      lastName:@"Changoo"];
     
+    FISStudent *jeremy = [[FISStudent alloc] initWithFirstName:@"Jeremy"
+                                                      lastName:@"Feld"];
+        
+    FISStudent *brian = [[FISStudent alloc] initWithFirstName:@"Brian"
+                                                     lastName:@"Clouser"];
+    
     [self.students addObject:angelica];
     [self.students addObject:ariel];
     [self.students addObject:rodrigo];
     [self.students addObject:felix];
+    [self.students addObject:jeremy];
+    [self.students addObject:brian];
+        
+    [self sortStudentsByFirstName:self.students];
     }
     
     // Uncomment the following line to preserve selection between presentations.
@@ -123,6 +133,14 @@
         destinationViewController.signedInStudents = self.signedInStudents;
         destinationViewController.students = self.students;
     }
+}
+
+#pragma mark - Helper Methods
+
+- (void)sortStudentsByFirstName:(NSMutableArray *)students {
+    NSSortDescriptor *sortByFirstNameAscending = [NSSortDescriptor sortDescriptorWithKey:@"firstName"
+                                                                               ascending:YES];
+    [students sortUsingDescriptors:@[sortByFirstNameAscending]];
 }
 
 @end
