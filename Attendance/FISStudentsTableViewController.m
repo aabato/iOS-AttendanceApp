@@ -38,6 +38,24 @@
         
     FISStudent *brian = [[FISStudent alloc] initWithFirstName:@"Brian"
                                                      lastName:@"Clouser"];
+        
+    FISStudent *daniel = [[FISStudent alloc] initWithFirstName:@"Daniel"
+                                                    lastName:@"Adeyanju"];
+        
+    FISStudent *lisa = [[FISStudent alloc] initWithFirstName:@"Lisa"
+                                                    lastName:@"Lee"];
+        
+    FISStudent *rosie = [[FISStudent alloc] initWithFirstName:@"Rosie"
+                                                     lastName:@"Tarabocchia"];
+        
+        FISStudent *adrian = [[FISStudent alloc] initWithFirstName:@"Adrian"
+                                                          lastName:@"Brown"];
+        
+        FISStudent *federico = [[FISStudent alloc] initWithFirstName:@"Federico"
+                                                            lastName:@"Paliotta"];
+        
+        FISStudent *andreas = [[FISStudent alloc] initWithFirstName:@"Andreas"
+                                                           lastName:@"Vestergaard"];
     
     [self.students addObject:angelica];
     [self.students addObject:ariel];
@@ -45,6 +63,13 @@
     [self.students addObject:felix];
     [self.students addObject:jeremy];
     [self.students addObject:brian];
+    [self.students addObject:daniel];
+    [self.students addObject:lisa];
+    [self.students addObject:rosie];
+    [self.students addObject:adrian];
+    [self.students addObject:federico];
+    [self.students addObject:andreas];
+    
         
     [self sortStudentsByFirstName:self.students];
     }

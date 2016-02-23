@@ -24,10 +24,9 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
-- (IBAction)signInButtonWasTapped:(UIBarButtonItem *)sender {
-    [self performSegueWithIdentifier:@"dataToSignInSegue"
-                              sender:nil];
-}
+#warning Implement a button to go back to the home sign in page with:
+//[self performSegueWithIdentifier:@"dataToSignInSegue"
+                          //sender:nil];
 
 #pragma mark - Table view data source
 

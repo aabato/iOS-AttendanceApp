@@ -20,6 +20,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    [self.firstNameConfirmationLabel removeConstraints:self.firstNameConfirmationLabel.constraints];
+    [self.timeLabel removeConstraints:self.timeLabel.constraints];
+    [self.view removeConstraints:self.view.constraints];
+    
+    [self.firstNameConfirmationLabel.centerXAnchor constraintEqualToAnchor:self.view.centerXAnchor].active = YES;
+    [self.firstNameConfirmationLabel.centerYAnchor constraintEqualToAnchor:self.view.centerYAnchor].active = YES;
+    
+    [self.timeLabel.centerXAnchor constraintEqualToAnchor:self.view.centerXAnchor].active = YES;
+    [self.timeLabel.topAnchor constraintEqualToAnchor:self.firstNameConfirmationLabel.bottomAnchor constant:20].active = YES;
+    
     NSDate *date = [NSDate date];
     NSDateFormatter *dateFormatter = [NSDateFormatter new];
     dateFormatter.timeStyle = NSDateFormatterShortStyle;

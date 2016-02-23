@@ -14,96 +14,82 @@
                         <viewControllerLayoutGuide type="bottom" id="kvC-nN-nrM"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="3wB-ur-CbY">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="faN-ra-O6e">
+                                <rect key="frame" x="534" y="28" width="46" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="42"/>
+                                <state key="normal" title="X"/>
+                                <connections>
+                                    <action selector="dissmissModalXButtonWasTapped:" destination="OKB-iy-u5M" eventType="touchUpInside" id="Wzd-7L-bV8"/>
+                                </connections>
+                            </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Please enter the password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Mzz-sw-09o">
-                                <rect key="frame" x="28" y="101" width="493" height="30"/>
+                                <rect key="frame" x="73" y="242" width="493" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Password:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="msM-gd-1sd">
-                                <rect key="frame" x="28" y="72" width="132" height="21"/>
+                                <rect key="frame" x="73" y="213" width="132" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8vJ-hG-5rJ">
-                                <rect key="frame" x="28" y="164" width="69" height="30"/>
-                                <state key="normal" title="Sign In"/>
-                                <connections>
-                                    <action selector="signInWasTapped:" destination="OKB-iy-u5M" eventType="touchUpInside" id="302-N7-3Rk"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Please try again." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tHr-US-Dkx">
-                                <rect key="frame" x="28" y="210" width="317" height="21"/>
+                                <rect key="frame" x="73" y="351" width="317" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PZY-QR-znr">
-                                <rect key="frame" x="-14" y="0.0" width="768" height="44"/>
-                                <items>
-                                    <navigationItem id="A8G-vg-pwl">
-                                        <barButtonItem key="leftBarButtonItem" title="Go Back" id="xU7-mU-T6E">
-                                            <connections>
-                                                <action selector="goBackButtonWasTapped:" destination="OKB-iy-u5M" id="PxL-PA-FZE"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kD2-AO-HD6">
+                                <rect key="frame" x="73" y="305" width="69" height="30"/>
+                                <state key="normal" title="Sign In"/>
+                                <connections>
+                                    <action selector="signInWasTapped:" destination="OKB-iy-u5M" eventType="touchUpInside" id="kBn-OV-1dX"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="dismissModalXButton" destination="faN-ra-O6e" id="kHl-58-B5a"/>
+                        <outlet property="passwordLabel" destination="msM-gd-1sd" id="ZRp-Ix-K2b"/>
                         <outlet property="passwordTextField" destination="Mzz-sw-09o" id="xAf-7b-mhy"/>
                         <outlet property="pleaseTryAgainLabel" destination="tHr-US-Dkx" id="4bu-h1-zL6"/>
+                        <outlet property="signInButton" destination="kD2-AO-HD6" id="ri6-sN-fFg"/>
                         <segue destination="dtd-3M-c7n" kind="presentation" identifier="loginToDataSegue" id="8S7-gg-7z0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nDL-3n-Gz8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="658" y="-773"/>
+            <point key="canvasLocation" x="1730" y="-785"/>
         </scene>
         <!--Data Table View Controller-->
         <scene sceneID="TpC-Q9-gVQ">
             <objects>
                 <tableViewController id="dtd-3M-c7n" customClass="FISDataTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="rNQ-vg-T9h">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <navigationBar key="tableHeaderView" contentMode="scaleToFill" id="yXX-WZ-MdI">
-                            <rect key="frame" x="0.0" y="0.0" width="768" height="44"/>
-                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            <items>
-                                <navigationItem id="iYr-Fo-4zI">
-                                    <barButtonItem key="leftBarButtonItem" title="Sign In" id="ATA-OL-6Vx">
-                                        <connections>
-                                            <action selector="signInButtonWasTapped:" destination="dtd-3M-c7n" id="zxl-R1-hK1"/>
-                                        </connections>
-                                    </barButtonItem>
-                                </navigationItem>
-                            </items>
-                        </navigationBar>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="dataCell" textLabel="gKm-z9-vRP" detailTextLabel="KlN-5s-upH" style="IBUITableViewCellStyleValue1" id="NbP-BB-Qli">
-                                <rect key="frame" x="0.0" y="72" width="768" height="44"/>
+                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NbP-BB-Qli" id="7Pl-1Z-cdK">
-                                    <rect key="frame" x="0.0" y="0.0" width="768" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="gKm-z9-vRP">
-                                            <rect key="frame" x="68" y="12" width="32" height="20"/>
+                                            <rect key="frame" x="15" y="12" width="32" height="20"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="KlN-5s-upH">
-                                            <rect key="frame" x="658" y="12" width="42" height="20"/>
+                                            <rect key="frame" x="543" y="12" width="42" height="20"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                             <color key="textColor" red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="calibratedRGB"/>
@@ -124,22 +110,22 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wEC-uE-jY4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1633" y="-773"/>
+            <point key="canvasLocation" x="2549" y="-785"/>
         </scene>
         <!--Sign In View Controller-->
         <scene sceneID="WqI-kX-3du">
             <objects>
                 <tableViewController id="Jhv-46-wEv" userLabel="Sign In View Controller" customClass="FISStudentsTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="oAE-2e-Np7">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="basicCell" id="Wlh-bd-n8l">
-                                <rect key="frame" x="0.0" y="28" width="768" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="basicCell" id="Wlh-bd-n8l">
+                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Wlh-bd-n8l" id="ubk-mz-Goa">
-                                    <rect key="frame" x="0.0" y="0.0" width="768" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="567" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
@@ -159,7 +145,6 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nsc-r8-IPh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -174,25 +159,24 @@
                         <viewControllerLayoutGuide type="bottom" id="0OW-Np-3wm"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="hSa-1e-bOK">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X4A-4C-GfO">
-                                <rect key="frame" x="110" y="291" width="549" height="292"/>
+                                <rect key="frame" x="26" y="154" width="549" height="292"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="63"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PRm-k4-LLv">
-                                <rect key="frame" x="183" y="633" width="402" height="40"/>
+                                <rect key="frame" x="99" y="356" width="402" height="40"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                     <connections>
                         <outlet property="firstNameConfirmationLabel" destination="X4A-4C-GfO" id="kKd-is-JWE"/>
                         <outlet property="timeLabel" destination="PRm-k4-LLv" id="h9h-oM-huV"/>
