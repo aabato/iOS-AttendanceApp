@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		B0F6E5901C77C94A003DC372 /* FISLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0F6E58F1C77C94A003DC372 /* FISLoginViewController.m */; };
 		B0F6E5931C77D14B003DC372 /* FISDataTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0F6E5921C77D14B003DC372 /* FISDataTableViewController.m */; };
+		BD3E025E1C84CCB600C5110B /* FISStudentsDataStore.m in Sources */ = {isa = PBXBuildFile; fileRef = BD3E025D1C84CCB600C5110B /* FISStudentsDataStore.m */; };
 		BD91819C1C775F630060F711 /* FISConfirmationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD9181971C775F630060F711 /* FISConfirmationViewController.m */; };
 		BD91819D1C775F630060F711 /* FISStudent.m in Sources */ = {isa = PBXBuildFile; fileRef = BD9181991C775F630060F711 /* FISStudent.m */; };
 		BD91819E1C775F630060F711 /* FISStudentsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD91819B1C775F630060F711 /* FISStudentsTableViewController.m */; };
@@ -43,6 +44,8 @@
 		B0F6E58F1C77C94A003DC372 /* FISLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FISLoginViewController.m; sourceTree = "<group>"; };
 		B0F6E5911C77D14B003DC372 /* FISDataTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FISDataTableViewController.h; sourceTree = "<group>"; };
 		B0F6E5921C77D14B003DC372 /* FISDataTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FISDataTableViewController.m; sourceTree = "<group>"; };
+		BD3E025C1C84CCB600C5110B /* FISStudentsDataStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FISStudentsDataStore.h; sourceTree = "<group>"; };
+		BD3E025D1C84CCB600C5110B /* FISStudentsDataStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FISStudentsDataStore.m; sourceTree = "<group>"; };
 		BD9181961C775F630060F711 /* FISConfirmationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FISConfirmationViewController.h; sourceTree = "<group>"; };
 		BD9181971C775F630060F711 /* FISConfirmationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FISConfirmationViewController.m; sourceTree = "<group>"; };
 		BD9181981C775F630060F711 /* FISStudent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FISStudent.h; sourceTree = "<group>"; };
@@ -113,6 +116,8 @@
 		BDB191D51C6E4AE50057200D /* Attendance */ = {
 			isa = PBXGroup;
 			children = (
+				BD3E025C1C84CCB600C5110B /* FISStudentsDataStore.h */,
+				BD3E025D1C84CCB600C5110B /* FISStudentsDataStore.m */,
 				B0F6E5911C77D14B003DC372 /* FISDataTableViewController.h */,
 				B0F6E5921C77D14B003DC372 /* FISDataTableViewController.m */,
 				B0F6E58E1C77C94A003DC372 /* FISLoginViewController.h */,
@@ -294,6 +299,7 @@
 				BDB191DB1C6E4AE50057200D /* AppDelegate.m in Sources */,
 				BDB191D81C6E4AE50057200D /* main.m in Sources */,
 				BD91819E1C775F630060F711 /* FISStudentsTableViewController.m in Sources */,
+				BD3E025E1C84CCB600C5110B /* FISStudentsDataStore.m in Sources */,
 				BD91819D1C775F630060F711 /* FISStudent.m in Sources */,
 				BD91819C1C775F630060F711 /* FISConfirmationViewController.m in Sources */,
 				B0F6E5901C77C94A003DC372 /* FISLoginViewController.m in Sources */,

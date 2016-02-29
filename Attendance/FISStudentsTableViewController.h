@@ -10,6 +10,7 @@
 #import "FISStudent.h"
 #import "FISConfirmationViewController.h"
 #import "FISLoginViewController.h"
+#import "FISStudentsDataStore.h"
 
 @interface FISStudentsTableViewController : UITableViewController
 

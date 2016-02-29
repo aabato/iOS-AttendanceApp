@@ -17,16 +17,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="faN-ra-O6e">
-                                <rect key="frame" x="534" y="28" width="46" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="42"/>
-                                <state key="normal" title="X"/>
-                                <connections>
-                                    <action selector="dissmissModalXButtonWasTapped:" destination="OKB-iy-u5M" eventType="touchUpInside" id="Wzd-7L-bV8"/>
-                                </connections>
-                            </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Please enter the password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Mzz-sw-09o">
-                                <rect key="frame" x="73" y="242" width="493" height="30"/>
+                                <rect key="frame" x="73" y="242" width="361" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
@@ -37,33 +29,38 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Please try again." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tHr-US-Dkx">
-                                <rect key="frame" x="73" y="351" width="317" height="21"/>
+                                <rect key="frame" x="73" y="289" width="317" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kD2-AO-HD6">
-                                <rect key="frame" x="73" y="305" width="69" height="30"/>
-                                <state key="normal" title="Sign In"/>
-                                <connections>
-                                    <action selector="signInWasTapped:" destination="OKB-iy-u5M" eventType="touchUpInside" id="kBn-OV-1dX"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="6X1-fp-Q3Y">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="Flo-FN-dBq">
+                            <connections>
+                                <action selector="dissmissModalXButtonWasTapped:" destination="OKB-iy-u5M" id="ryN-Qt-wLn"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Login" id="PGq-hg-Mrp">
+                            <connections>
+                                <action selector="signInWasTapped:" destination="OKB-iy-u5M" id="ide-6d-VEP"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
-                        <outlet property="dismissModalXButton" destination="faN-ra-O6e" id="kHl-58-B5a"/>
+                        <outlet property="cancelButton" destination="Flo-FN-dBq" id="T0d-o1-Sh2"/>
+                        <outlet property="loginButton" destination="PGq-hg-Mrp" id="poW-nA-hyJ"/>
                         <outlet property="passwordLabel" destination="msM-gd-1sd" id="ZRp-Ix-K2b"/>
                         <outlet property="passwordTextField" destination="Mzz-sw-09o" id="xAf-7b-mhy"/>
                         <outlet property="pleaseTryAgainLabel" destination="tHr-US-Dkx" id="4bu-h1-zL6"/>
-                        <outlet property="signInButton" destination="kD2-AO-HD6" id="ri6-sN-fFg"/>
-                        <segue destination="dtd-3M-c7n" kind="presentation" identifier="loginToDataSegue" id="8S7-gg-7z0"/>
+                        <segue destination="dtd-3M-c7n" kind="show" identifier="loginToDataSegue" id="8S7-gg-7z0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nDL-3n-Gz8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1730" y="-785"/>
+            <point key="canvasLocation" x="2542" y="-785"/>
         </scene>
         <!--Data Table View Controller-->
         <scene sceneID="TpC-Q9-gVQ">
@@ -75,21 +72,21 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="dataCell" textLabel="gKm-z9-vRP" detailTextLabel="KlN-5s-upH" style="IBUITableViewCellStyleValue1" id="NbP-BB-Qli">
-                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NbP-BB-Qli" id="7Pl-1Z-cdK">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="gKm-z9-vRP">
-                                            <rect key="frame" x="15" y="12" width="32" height="20"/>
+                                            <rect key="frame" x="15" y="12" width="31.5" height="19.5"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="KlN-5s-upH">
-                                            <rect key="frame" x="543" y="12" width="42" height="20"/>
+                                            <rect key="frame" x="543.5" y="12" width="41.5" height="19.5"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                             <color key="textColor" red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="calibratedRGB"/>
@@ -104,13 +101,10 @@
                             <outlet property="delegate" destination="dtd-3M-c7n" id="s38-EV-X3t"/>
                         </connections>
                     </tableView>
-                    <connections>
-                        <segue destination="Jhv-46-wEv" kind="show" identifier="dataToSignInSegue" id="vKk-ld-V2U"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wEC-uE-jY4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2549" y="-785"/>
+            <point key="canvasLocation" x="3361" y="-785"/>
         </scene>
         <!--Sign In View Controller-->
         <scene sceneID="WqI-kX-3du">
@@ -122,10 +116,10 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="basicCell" id="Wlh-bd-n8l">
-                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Wlh-bd-n8l" id="ubk-mz-Goa">
-                                    <rect key="frame" x="0.0" y="0.0" width="567" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="567" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
@@ -141,7 +135,7 @@
                     <navigationItem key="navigationItem" title="Sign In" id="9pD-LI-wN5">
                         <barButtonItem key="rightBarButtonItem" title="Log In" id="Dij-Mb-EOw">
                             <connections>
-                                <segue destination="OKB-iy-u5M" kind="presentation" identifier="loginSegue" id="zhR-nn-Ac4"/>
+                                <segue destination="hSo-GK-QFF" kind="presentation" identifier="loginSegue" id="zhR-nn-Ac4"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -202,8 +196,23 @@
             </objects>
             <point key="canvasLocation" x="164" y="447"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="E2y-3P-Ge8">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hSo-GK-QFF" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="phJ-Zb-R1f">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="OKB-iy-u5M" kind="relationship" relationship="rootViewController" id="cWr-dT-fEc"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kxW-2Y-Gay" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1730" y="-785"/>
+        </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="vKk-ld-V2U"/>
-    </inferredMetricsTieBreakers>
 </document>

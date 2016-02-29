@@ -14,9 +14,10 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *passwordLabel;
 @property (weak, nonatomic) IBOutlet UITextField *passwordTextField;
-@property (weak, nonatomic) IBOutlet UIButton *signInButton;
 @property (weak, nonatomic) IBOutlet UILabel *pleaseTryAgainLabel;
-@property (weak, nonatomic) IBOutlet UIButton *dismissModalXButton;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *cancelButton;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *loginButton;
+
 
 @property (strong, nonatomic) NSString *password;
 @property (strong, nonatomic) NSMutableArray *signedInStudents;

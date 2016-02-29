@@ -17,61 +17,10 @@
 - (void)viewDidLoad {
     
     if (self.viewDidLoadCount != 1) {
-    [super viewDidLoad];
-    self.students = [NSMutableArray new];
-    self.signedInStudents = [NSMutableArray new];
-    
-    FISStudent *angelica = [[FISStudent alloc] initWithFirstName:@"Angelica"
-                                                        lastName:@"Bato"];
-    
-    FISStudent *ariel = [[FISStudent alloc] initWithFirstName:@"Ariel"
-                                                     lastName:@"Scott-Dicker"];
-    
-    FISStudent *rodrigo = [[FISStudent alloc] initWithFirstName:@"Rodrigo"
-                                                       lastName:@"Santos"];
-    
-    FISStudent *felix = [[FISStudent alloc] initWithFirstName:@"Felix"
-                                                     lastName:@"Changoo"];
-    
-    FISStudent *jeremy = [[FISStudent alloc] initWithFirstName:@"Jeremy"
-                                                      lastName:@"Feld"];
-        
-    FISStudent *brian = [[FISStudent alloc] initWithFirstName:@"Brian"
-                                                     lastName:@"Clouser"];
-        
-    FISStudent *daniel = [[FISStudent alloc] initWithFirstName:@"Daniel"
-                                                    lastName:@"Adeyanju"];
-        
-    FISStudent *lisa = [[FISStudent alloc] initWithFirstName:@"Lisa"
-                                                    lastName:@"Lee"];
-        
-    FISStudent *rosie = [[FISStudent alloc] initWithFirstName:@"Rosie"
-                                                     lastName:@"Tarabocchia"];
-        
-        FISStudent *adrian = [[FISStudent alloc] initWithFirstName:@"Adrian"
-                                                          lastName:@"Brown"];
-        
-        FISStudent *federico = [[FISStudent alloc] initWithFirstName:@"Federico"
-                                                            lastName:@"Paliotta"];
-        
-        FISStudent *andreas = [[FISStudent alloc] initWithFirstName:@"Andreas"
-                                                           lastName:@"Vestergaard"];
-    
-    [self.students addObject:angelica];
-    [self.students addObject:ariel];
-    [self.students addObject:rodrigo];
-    [self.students addObject:felix];
-    [self.students addObject:jeremy];
-    [self.students addObject:brian];
-    [self.students addObject:daniel];
-    [self.students addObject:lisa];
-    [self.students addObject:rosie];
-    [self.students addObject:adrian];
-    [self.students addObject:federico];
-    [self.students addObject:andreas];
-    
-        
-    [self sortStudentsByFirstName:self.students];
+        [super viewDidLoad];
+        FISStudentsDataStore *myStore = [FISStudentsDataStore commonDataStore];
+        self.students = myStore.students;
+        self.signedInStudents = myStore.signedInStudents;
     }
     
     // Uncomment the following line to preserve selection between presentations.
@@ -141,22 +90,25 @@
                  sender:(id)sender {
     if ([segue.identifier isEqualToString:@"confirmationSegue"]) {
     
-    FISConfirmationViewController *destinationViewController = segue.destinationViewController;
-    
-    NSIndexPath *indexPathOfPressedRow = self.tableView.indexPathForSelectedRow;
-    FISStudent *studentAtPressedRow = self.students[indexPathOfPressedRow.row];
-    studentAtPressedRow.isSignedIn = YES;
-    
-    destinationViewController.firstNameOfSignedInStudent = studentAtPressedRow.firstName;
-    
-    [self.signedInStudents addObject:studentAtPressedRow];
-    [self.students removeObject:studentAtPressedRow];
-    [self.tableView deleteRowsAtIndexPaths:@[indexPathOfPressedRow] withRowAnimation:UITableViewRowAnimationRight];
+        FISConfirmationViewController *destinationViewController = segue.destinationViewController;
+        
+        NSIndexPath *indexPathOfPressedRow = self.tableView.indexPathForSelectedRow;
+        FISStudent *studentAtPressedRow = self.students[indexPathOfPressedRow.row];
+        studentAtPressedRow.isSignedIn = YES;
+        
+        destinationViewController.firstNameOfSignedInStudent = studentAtPressedRow.firstName;
+        
+        FISStudentsDataStore *dataStore = [FISStudentsDataStore commonDataStore];
+            
+        [dataStore.signedInStudents addObject:studentAtPressedRow];
+        [dataStore.students removeObject:studentAtPressedRow];
+        [self.tableView deleteRowsAtIndexPaths:@[indexPathOfPressedRow] withRowAnimation:UITableViewRowAnimationRight];
+        
     }
-    else {
+    else if ([segue.identifier isEqualToString:@"loginSegue"]){
         FISLoginViewController *destinationViewController = segue.destinationViewController;
-        destinationViewController.signedInStudents = self.signedInStudents;
-        destinationViewController.students = self.students;
+//        destinationViewController.signedInStudents = self.signedInStudents;
+//        destinationViewController.students = self.students;
     }
 }
 
