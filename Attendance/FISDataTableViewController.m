@@ -18,8 +18,9 @@
     [super viewDidLoad];
     self.viewDidLoadCount = 1;
     FISStudentsDataStore *dataStore = [FISStudentsDataStore commonDataStore];
-    self.signedInStudents = dataStore.signedInStudents;
-    self.students = dataStore.students;
+    [dataStore fetchData];
+//    self.signedInStudents = dataStore.signedInStudents;
+//    self.students = dataStore.students;
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;

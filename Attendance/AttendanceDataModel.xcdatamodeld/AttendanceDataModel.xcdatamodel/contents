@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="10171" systemVersion="15E65" minimumToolsVersion="Xcode 7.0">
+    <entity name="FISDay" representedClassName="FISDay" syncable="YES">
+        <attribute name="date" optional="YES" attributeType="Date" syncable="YES"/>
+        <relationship name="nonSignedInStudents" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="FISStudentDM" syncable="YES"/>
+        <relationship name="signedInStudents" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="FISStudentDM" syncable="YES"/>
+    </entity>
+    <entity name="FISSignInEvent" representedClassName="FISSignInEvent" syncable="YES">
+        <attribute name="isLate" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="timeStamp" optional="YES" attributeType="Date" syncable="YES"/>
+        <relationship name="signInByUser" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="FISStudentDM" inverseName="studentSignIns" inverseEntity="FISStudentDM" syncable="YES"/>
+    </entity>
+    <entity name="FISStudentDM" representedClassName="FISStudentDM" syncable="YES">
+        <attribute name="firstName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lastName" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="studentSignIns" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="FISSignInEvent" inverseName="signInByUser" inverseEntity="FISSignInEvent" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="FISStudentDM" positionX="-414" positionY="-18" width="128" height="88"/>
+        <element name="FISSignInEvent" positionX="-54" positionY="-9" width="128" height="88"/>
+        <element name="FISDay" positionX="-207" positionY="45" width="128" height="90"/>
+    </elements>
+</model>

@@ -19,8 +19,12 @@
     if (self.viewDidLoadCount != 1) {
         [super viewDidLoad];
         FISStudentsDataStore *myStore = [FISStudentsDataStore commonDataStore];
-        self.students = myStore.students;
-        self.signedInStudents = myStore.signedInStudents;
+        [myStore fetchData];
+        [myStore saveContext];
+        self.students = [[myStore.day.nonSignedInStudents allObjects] mutableCopy];
+        self.signedInStudents = [[myStore.day.signedInStudents allObjects] mutableCopy];
+        
+        NSLog(@"mystore.students: %@, self.students :%@", [myStore.day.nonSignedInStudents allObjects], self.students);
     }
     
     // Uncomment the following line to preserve selection between presentations.
@@ -43,7 +47,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"basicCell" forIndexPath:indexPath];
     
-    FISStudent *studentAtRowOfIndexPath = self.students[indexPath.row];
+    FISStudentDM *studentAtRowOfIndexPath = self.students[indexPath.row];
     cell.textLabel.text = [NSString stringWithFormat:@"%@ %@", studentAtRowOfIndexPath.firstName, studentAtRowOfIndexPath.lastName];
     
     return cell;
@@ -93,17 +97,22 @@
         FISConfirmationViewController *destinationViewController = segue.destinationViewController;
         
         NSIndexPath *indexPathOfPressedRow = self.tableView.indexPathForSelectedRow;
-        FISStudent *studentAtPressedRow = self.students[indexPathOfPressedRow.row];
-        studentAtPressedRow.isSignedIn = YES;
+        FISStudentDM *studentAtPressedRow = self.students[indexPathOfPressedRow.row];
+//        studentAtPressedRow.isSignedIn = YES;
         
         destinationViewController.firstNameOfSignedInStudent = studentAtPressedRow.firstName;
         
         FISStudentsDataStore *dataStore = [FISStudentsDataStore commonDataStore];
-            
-        [dataStore.signedInStudents addObject:studentAtPressedRow];
-        [dataStore.students removeObject:studentAtPressedRow];
+        
+        [dataStore.day addSignedInStudentsObject:studentAtPressedRow];
+        [dataStore.day removeNonSignedInStudentsObject:studentAtPressedRow];
+        
+//        [dataStore.signedInStudents addObject:studentAtPressedRow];
+//        [dataStore.students removeObject:studentAtPressedRow];
+        
         [self.tableView deleteRowsAtIndexPaths:@[indexPathOfPressedRow] withRowAnimation:UITableViewRowAnimationRight];
         
+        [dataStore saveContext];
     }
     else if ([segue.identifier isEqualToString:@"loginSegue"]){
         FISLoginViewController *destinationViewController = segue.destinationViewController;

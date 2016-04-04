@@ -7,10 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "FISStudent.h"
+#import "FISStudentDM.h"
 #import "FISConfirmationViewController.h"
 #import "FISLoginViewController.h"
 #import "FISStudentsDataStore.h"
+#import "FISDay.h"
 
 @interface FISStudentsTableViewController : UITableViewController
 

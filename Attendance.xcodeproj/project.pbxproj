@@ -10,8 +10,14 @@
 		B0F6E5901C77C94A003DC372 /* FISLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0F6E58F1C77C94A003DC372 /* FISLoginViewController.m */; };
 		B0F6E5931C77D14B003DC372 /* FISDataTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0F6E5921C77D14B003DC372 /* FISDataTableViewController.m */; };
 		BD3E025E1C84CCB600C5110B /* FISStudentsDataStore.m in Sources */ = {isa = PBXBuildFile; fileRef = BD3E025D1C84CCB600C5110B /* FISStudentsDataStore.m */; };
+		BD45EE4F1CB047C000903B7C /* AttendanceDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BD45EE4D1CB047C000903B7C /* AttendanceDataModel.xcdatamodeld */; };
+		BD45EE861CB06E9200903B7C /* FISStudentDM+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = BD45EE7B1CB06E9200903B7C /* FISStudentDM+CoreDataProperties.m */; };
+		BD45EE871CB06E9200903B7C /* FISStudentDM.m in Sources */ = {isa = PBXBuildFile; fileRef = BD45EE7D1CB06E9200903B7C /* FISStudentDM.m */; };
+		BD45EE881CB06E9200903B7C /* FISDay+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = BD45EE7F1CB06E9200903B7C /* FISDay+CoreDataProperties.m */; };
+		BD45EE891CB06E9200903B7C /* FISDay.m in Sources */ = {isa = PBXBuildFile; fileRef = BD45EE811CB06E9200903B7C /* FISDay.m */; };
+		BD45EE8A1CB06E9200903B7C /* FISSignInEvent+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = BD45EE831CB06E9200903B7C /* FISSignInEvent+CoreDataProperties.m */; };
+		BD45EE8B1CB06E9200903B7C /* FISSignInEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = BD45EE851CB06E9200903B7C /* FISSignInEvent.m */; };
 		BD91819C1C775F630060F711 /* FISConfirmationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD9181971C775F630060F711 /* FISConfirmationViewController.m */; };
-		BD91819D1C775F630060F711 /* FISStudent.m in Sources */ = {isa = PBXBuildFile; fileRef = BD9181991C775F630060F711 /* FISStudent.m */; };
 		BD91819E1C775F630060F711 /* FISStudentsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD91819B1C775F630060F711 /* FISStudentsTableViewController.m */; };
 		BDB191D81C6E4AE50057200D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BDB191D71C6E4AE50057200D /* main.m */; };
 		BDB191DB1C6E4AE50057200D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BDB191DA1C6E4AE50057200D /* AppDelegate.m */; };
@@ -46,10 +52,21 @@
 		B0F6E5921C77D14B003DC372 /* FISDataTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FISDataTableViewController.m; sourceTree = "<group>"; };
 		BD3E025C1C84CCB600C5110B /* FISStudentsDataStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FISStudentsDataStore.h; sourceTree = "<group>"; };
 		BD3E025D1C84CCB600C5110B /* FISStudentsDataStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FISStudentsDataStore.m; sourceTree = "<group>"; };
+		BD45EE4E1CB047C000903B7C /* AttendanceDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AttendanceDataModel.xcdatamodel; sourceTree = "<group>"; };
+		BD45EE7A1CB06E9200903B7C /* FISStudentDM+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FISStudentDM+CoreDataProperties.h"; sourceTree = "<group>"; };
+		BD45EE7B1CB06E9200903B7C /* FISStudentDM+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FISStudentDM+CoreDataProperties.m"; sourceTree = "<group>"; };
+		BD45EE7C1CB06E9200903B7C /* FISStudentDM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FISStudentDM.h; sourceTree = "<group>"; };
+		BD45EE7D1CB06E9200903B7C /* FISStudentDM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FISStudentDM.m; sourceTree = "<group>"; };
+		BD45EE7E1CB06E9200903B7C /* FISDay+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FISDay+CoreDataProperties.h"; sourceTree = "<group>"; };
+		BD45EE7F1CB06E9200903B7C /* FISDay+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FISDay+CoreDataProperties.m"; sourceTree = "<group>"; };
+		BD45EE801CB06E9200903B7C /* FISDay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FISDay.h; sourceTree = "<group>"; };
+		BD45EE811CB06E9200903B7C /* FISDay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FISDay.m; sourceTree = "<group>"; };
+		BD45EE821CB06E9200903B7C /* FISSignInEvent+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FISSignInEvent+CoreDataProperties.h"; sourceTree = "<group>"; };
+		BD45EE831CB06E9200903B7C /* FISSignInEvent+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FISSignInEvent+CoreDataProperties.m"; sourceTree = "<group>"; };
+		BD45EE841CB06E9200903B7C /* FISSignInEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FISSignInEvent.h; sourceTree = "<group>"; };
+		BD45EE851CB06E9200903B7C /* FISSignInEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FISSignInEvent.m; sourceTree = "<group>"; };
 		BD9181961C775F630060F711 /* FISConfirmationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FISConfirmationViewController.h; sourceTree = "<group>"; };
 		BD9181971C775F630060F711 /* FISConfirmationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FISConfirmationViewController.m; sourceTree = "<group>"; };
-		BD9181981C775F630060F711 /* FISStudent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FISStudent.h; sourceTree = "<group>"; };
-		BD9181991C775F630060F711 /* FISStudent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FISStudent.m; sourceTree = "<group>"; };
 		BD91819A1C775F630060F711 /* FISStudentsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FISStudentsTableViewController.h; sourceTree = "<group>"; };
 		BD91819B1C775F630060F711 /* FISStudentsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FISStudentsTableViewController.m; sourceTree = "<group>"; };
 		BDB191D31C6E4AE50057200D /* Attendance.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Attendance.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -116,6 +133,18 @@
 		BDB191D51C6E4AE50057200D /* Attendance */ = {
 			isa = PBXGroup;
 			children = (
+				BD45EE7A1CB06E9200903B7C /* FISStudentDM+CoreDataProperties.h */,
+				BD45EE7B1CB06E9200903B7C /* FISStudentDM+CoreDataProperties.m */,
+				BD45EE7C1CB06E9200903B7C /* FISStudentDM.h */,
+				BD45EE7D1CB06E9200903B7C /* FISStudentDM.m */,
+				BD45EE7E1CB06E9200903B7C /* FISDay+CoreDataProperties.h */,
+				BD45EE7F1CB06E9200903B7C /* FISDay+CoreDataProperties.m */,
+				BD45EE801CB06E9200903B7C /* FISDay.h */,
+				BD45EE811CB06E9200903B7C /* FISDay.m */,
+				BD45EE821CB06E9200903B7C /* FISSignInEvent+CoreDataProperties.h */,
+				BD45EE831CB06E9200903B7C /* FISSignInEvent+CoreDataProperties.m */,
+				BD45EE841CB06E9200903B7C /* FISSignInEvent.h */,
+				BD45EE851CB06E9200903B7C /* FISSignInEvent.m */,
 				BD3E025C1C84CCB600C5110B /* FISStudentsDataStore.h */,
 				BD3E025D1C84CCB600C5110B /* FISStudentsDataStore.m */,
 				B0F6E5911C77D14B003DC372 /* FISDataTableViewController.h */,
@@ -126,12 +155,11 @@
 				BD9181971C775F630060F711 /* FISConfirmationViewController.m */,
 				BD91819A1C775F630060F711 /* FISStudentsTableViewController.h */,
 				BD91819B1C775F630060F711 /* FISStudentsTableViewController.m */,
-				BD9181981C775F630060F711 /* FISStudent.h */,
-				BD9181991C775F630060F711 /* FISStudent.m */,
 				BDB191D91C6E4AE50057200D /* AppDelegate.h */,
 				BDB191DA1C6E4AE50057200D /* AppDelegate.m */,
 				BDB191DF1C6E4AE50057200D /* Main.storyboard */,
 				BDB191E21C6E4AE50057200D /* Assets.xcassets */,
+				BD45EE4D1CB047C000903B7C /* AttendanceDataModel.xcdatamodeld */,
 				BDB191E41C6E4AE50057200D /* LaunchScreen.storyboard */,
 				BDB191E71C6E4AE50057200D /* Info.plist */,
 				BDB191D61C6E4AE50057200D /* Supporting Files */,
@@ -296,13 +324,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				B0F6E5931C77D14B003DC372 /* FISDataTableViewController.m in Sources */,
+				BD45EE8B1CB06E9200903B7C /* FISSignInEvent.m in Sources */,
 				BDB191DB1C6E4AE50057200D /* AppDelegate.m in Sources */,
+				BD45EE881CB06E9200903B7C /* FISDay+CoreDataProperties.m in Sources */,
+				BD45EE4F1CB047C000903B7C /* AttendanceDataModel.xcdatamodeld in Sources */,
+				BD45EE871CB06E9200903B7C /* FISStudentDM.m in Sources */,
+				BD45EE8A1CB06E9200903B7C /* FISSignInEvent+CoreDataProperties.m in Sources */,
 				BDB191D81C6E4AE50057200D /* main.m in Sources */,
 				BD91819E1C775F630060F711 /* FISStudentsTableViewController.m in Sources */,
+				BD45EE861CB06E9200903B7C /* FISStudentDM+CoreDataProperties.m in Sources */,
 				BD3E025E1C84CCB600C5110B /* FISStudentsDataStore.m in Sources */,
-				BD91819D1C775F630060F711 /* FISStudent.m in Sources */,
 				BD91819C1C775F630060F711 /* FISConfirmationViewController.m in Sources */,
 				B0F6E5901C77C94A003DC372 /* FISLoginViewController.m in Sources */,
+				BD45EE891CB06E9200903B7C /* FISDay.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -549,6 +583,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		BD45EE4D1CB047C000903B7C /* AttendanceDataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				BD45EE4E1CB047C000903B7C /* AttendanceDataModel.xcdatamodel */,
+			);
+			currentVersion = BD45EE4E1CB047C000903B7C /* AttendanceDataModel.xcdatamodel */;
+			path = AttendanceDataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = BDB191CB1C6E4AE50057200D /* Project object */;
 }
