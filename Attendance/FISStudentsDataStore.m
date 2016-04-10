@@ -105,7 +105,7 @@
 - (void)fetchData
 {
     NSFetchRequest *dayRequest = [NSFetchRequest fetchRequestWithEntityName:@"FISDay"];
-//    NSFetchRequest *studentRequest = [NSFetchRequest fetchRequestWithEntityName:@"FISStudentDM"];
+    NSFetchRequest *studentRequest = [NSFetchRequest fetchRequestWithEntityName:@"FISStudentDM"];
     NSFetchRequest *signInEventRequest = [NSFetchRequest fetchRequestWithEntityName:@"FISSignInEvent"];
     
     self.days = [self.managedObjectContext executeFetchRequest:dayRequest
@@ -124,9 +124,12 @@
     
     if (self.days.count >= 1) {
         FISDay *day = self.days[0];
-        self.nonSignedInStudents = [day.nonSignedInStudents allObjects];
-        
-    } else {
+//        self.nonSignedInStudents = [day.nonSignedInStudents allObjects];
+        self.nonSignedInStudents = [self.managedObjectContext executeFetchRequest:studentRequest
+                                                                            error:nil];
+        }
+    
+    else {
         self.nonSignedInStudents = [NSArray new];
     }
     
