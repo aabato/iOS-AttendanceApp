@@ -13,7 +13,7 @@
 
 -(void)generateTestData {
     
-    NSLog(@"Generate Test Data in the data store .m");
+    NSLog(@"====GENERATE TEST DATA CALLED ======");
     
     self.day = [NSEntityDescription insertNewObjectForEntityForName:@"FISDay"
                                              inManagedObjectContext:self.managedObjectContext];
@@ -41,9 +41,6 @@
     [self.day addNonSignedInStudentsObject:felix];
     [self.day addNonSignedInStudentsObject:jeremy];
     
-    NSLog(@"In Generate Test Data: %@", self.day.nonSignedInStudents);
-    NSLog(@"In Generate Test Data: %lu", self.day.nonSignedInStudents.count);
-    
     [self saveContext];
     [self fetchData];
     
@@ -59,7 +56,7 @@
         return _managedObjectContext;
     }
     
-    NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"objcCMR.sqlite"];
+    NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"AttendanceDataModel.sqlite"];
     
     NSError *error = nil;
     
@@ -98,20 +95,53 @@
     }
 }
 
+- (void)addStudent:(FISStudentDM *)student {
+    [self.day addSignedInStudentsObject:student];
+    [self.day removeNonSignedInStudentsObject:student];
+    [self saveContext];
+    [self fetchData];
+}
+
 - (void)fetchData
 {
     NSFetchRequest *dayRequest = [NSFetchRequest fetchRequestWithEntityName:@"FISDay"];
-    NSFetchRequest *studentRequest = [NSFetchRequest fetchRequestWithEntityName:@"FISStudentDM"];
+//    NSFetchRequest *studentRequest = [NSFetchRequest fetchRequestWithEntityName:@"FISStudentDM"];
+    NSFetchRequest *signInEventRequest = [NSFetchRequest fetchRequestWithEntityName:@"FISSignInEvent"];
     
     self.days = [self.managedObjectContext executeFetchRequest:dayRequest
                                                           error:nil];
     
-    self.nonSignedInStudents = [self.managedObjectContext executeFetchRequest:studentRequest
-                                                                              error:nil];
+    NSLog(@"days: %ld", self.days.count);
     
-//    if (self.day.nonSignedInStudents.count == 0) {
-//        [self generateTestData];
-//    }
+    
+    // Enter a for loop over self.days
+    // Generate a dictionary through this for loop.
+    // Key is the Day
+    // Value is an array of nonSignedInSTudents
+    // datastore has dictionary property, have it equal this built out dictionwary when done.
+    
+    
+    
+    if (self.days.count >= 1) {
+        FISDay *day = self.days[0];
+        self.nonSignedInStudents = [day.nonSignedInStudents allObjects];
+        
+    } else {
+        self.nonSignedInStudents = [NSArray new];
+    }
+    
+    
+    NSLog(@"nonSignedInStudents: %ld", self.nonSignedInStudents.count);
+    
+    self.signInEvents = [self.managedObjectContext executeFetchRequest:signInEventRequest
+                                                                 error:nil];
+    
+    NSLog(@"signInEvents: %ld", self.signInEvents.count);
+    
+    if (self.days.count == 0) {
+        NSLog(@"--------- NONSIGNED IN STUDENTS IS ZERO !!!! ---------\n\n\n");
+        [self generateTestData];
+    }
 }
 
 +(instancetype)commonDataStore {
@@ -120,17 +150,9 @@
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         dataStore = [[FISStudentsDataStore alloc] init];
+        [dataStore fetchData];
     });
     return dataStore;
 }
-
-//-(instancetype)init {
-//    self = [super init];
-//    if (self) {
-//        [self fetchData];
-//    }
-//    
-//    return self;
-//}
 
 @end

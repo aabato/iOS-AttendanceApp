@@ -18,6 +18,7 @@
 @property (strong, nonatomic) NSArray *nonSignedInStudents;
 @property (strong, nonatomic) NSMutableArray *signedInStudents;
 @property (strong, nonatomic) FISStudentsDataStore *sharedDataStore;
+
 @property NSUInteger viewDidLoadCount;
 
 #pragma mark - Helper Methods

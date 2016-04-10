@@ -18,12 +18,14 @@
 @property (strong, nonatomic) FISDay *day;
 @property (strong, nonatomic) NSArray *days;
 @property (strong, nonatomic) NSArray *nonSignedInStudents;
+@property (strong, nonatomic) NSArray *signInEvents;
 @property (readonly, strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 
 - (void)saveContext;
 - (void)fetchData;
 - (void)generateTestData;
 - (NSURL *)applicationDocumentsDirectory;
+- (void)addStudent:(FISStudentDM *)student;
 
 + (instancetype)commonDataStore;
 

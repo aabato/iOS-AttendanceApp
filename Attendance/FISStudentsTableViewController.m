@@ -10,6 +10,7 @@
 
 @interface FISStudentsTableViewController ()
 
+
 @end
 
 @implementation FISStudentsTableViewController
@@ -17,29 +18,13 @@
 - (void)viewDidLoad {
     
     [super viewDidLoad];
-    
-    NSLog(@"FIS Students View Did Load");
-    NSLog(@"Students View Did Load Count: %lu", self.viewDidLoadCount);
 
-    
-    
-    
-//    if (self.viewDidLoadCount != 1) {
     self.sharedDataStore = [FISStudentsDataStore commonDataStore];
-    [self.sharedDataStore fetchData];
-    [self.sharedDataStore generateTestData];
-    [self.sharedDataStore saveContext];
-    
-    self.nonSignedInStudents = self.sharedDataStore.nonSignedInStudents;
     
     
     
-
-
-//        self.students = [[myStore.day.nonSignedInStudents allObjects] mutableCopy];
-//        self.signedInStudents = [[myStore.day.signedInStudents allObjects] mutableCopy];
-        
-//        NSLog(@"mystore.students: %@, self.students :%@", [myStore.day.nonSignedInStudents allObjects], self.students);
+    
+//    self.nonSignedInStudents = self.sharedDataStore.nonSignedInStudents;
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -55,6 +40,8 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    NSLog(@"------NUMBER OF ROWS CALLED-------");
+    NSLog(@"%ld number of rows", self.sharedDataStore.day.nonSignedInStudents.count);
     return self.sharedDataStore.day.nonSignedInStudents.count;
 }
 
@@ -64,7 +51,7 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"basicCell"
                                                             forIndexPath:indexPath];
     
-    FISStudentDM *studentAtRowOfIndexPath = self.nonSignedInStudents[indexPath.row];
+    FISStudentDM *studentAtRowOfIndexPath = self.sharedDataStore.nonSignedInStudents[indexPath.row];
     cell.textLabel.text = [NSString stringWithFormat:@"%@ %@", studentAtRowOfIndexPath.firstName, studentAtRowOfIndexPath.lastName];
     
     return cell;
@@ -109,33 +96,35 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue
                  sender:(id)sender {
+    
     if ([segue.identifier isEqualToString:@"confirmationSegue"]) {
+        
+//        FISStudentsDataStore *sharedDataStore = [FISStudentsDataStore commonDataStore];
     
         FISConfirmationViewController *destinationViewController = segue.destinationViewController;
         
         NSIndexPath *indexPathOfPressedRow = self.tableView.indexPathForSelectedRow;
-        FISStudentDM *studentAtPressedRow = self.nonSignedInStudents[indexPathOfPressedRow.row];
+        FISStudentDM *studentAtPressedRow = self.sharedDataStore.nonSignedInStudents[indexPathOfPressedRow.row];
 //        studentAtPressedRow.isSignedIn = YES;
         
         destinationViewController.firstNameOfSignedInStudent = studentAtPressedRow.firstName;
         
-        FISStudentsDataStore *dataStore = [FISStudentsDataStore commonDataStore];
+        [self.sharedDataStore addStudent:studentAtPressedRow];
+    
+       // [self.tableView reloadData];
         
-        [dataStore.day addSignedInStudentsObject:studentAtPressedRow];
-        [dataStore.day removeNonSignedInStudentsObject:studentAtPressedRow];
+        NSLog(@"indexPath: %@", indexPathOfPressedRow);
+        NSLog(@"Non Signed In Students Count: %lu", self.sharedDataStore.nonSignedInStudents.count);
         
-//        [dataStore.signedInStudents addObject:studentAtPressedRow];
-//        [dataStore.students removeObject:studentAtPressedRow];
         
-        [self.tableView deleteRowsAtIndexPaths:@[indexPathOfPressedRow] withRowAnimation:UITableViewRowAnimationRight];
-        
-        [dataStore saveContext];
+        [self.tableView deleteRowsAtIndexPaths:@[indexPathOfPressedRow]
+                              withRowAnimation:UITableViewRowAnimationNone];
     }
-    else if ([segue.identifier isEqualToString:@"loginSegue"]){
-        FISLoginViewController *destinationViewController = segue.destinationViewController;
+    
+//    else if ([segue.identifier isEqualToString:@"loginSegue"]){
+//        FISLoginViewController *destinationViewController = segue.destinationViewController;
 //        destinationViewController.signedInStudents = self.signedInStudents;
 //        destinationViewController.students = self.students;
-    }
 }
 
 #pragma mark - Helper Methods
