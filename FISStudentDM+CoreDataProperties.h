@@ -2,7 +2,7 @@
 //  FISStudentDM+CoreDataProperties.h
 //  Attendance
 //
-//  Created by Angelica Bato on 4/2/16.
+//  Created by Ariel Scott-Dicker on 4/10/16.
 //  Copyright © 2016 Angelica Bato. All rights reserved.
 //
 //  Choose "Create NSManagedObject Subclass…" from the Core Data editor menu

@@ -2,7 +2,7 @@
 //  FISSignInEvent+CoreDataProperties.h
 //  Attendance
 //
-//  Created by Angelica Bato on 4/2/16.
+//  Created by Ariel Scott-Dicker on 4/10/16.
 //  Copyright © 2016 Angelica Bato. All rights reserved.
 //
 //  Choose "Create NSManagedObject Subclass…" from the Core Data editor menu
@@ -15,8 +15,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface FISSignInEvent (CoreDataProperties)
 
-@property (nonatomic) NSTimeInterval timeStamp;
-@property (nonatomic) BOOL isLate;
+@property (nullable, nonatomic, retain) NSNumber *isLate;
+@property (nullable, nonatomic, retain) NSDate *timeStamp;
 @property (nullable, nonatomic, retain) FISStudentDM *signInByUser;
 
 @end

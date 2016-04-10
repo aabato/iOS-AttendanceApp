@@ -1,15 +1,15 @@
 //
-//  FISStudentDM.m
+//  FISSignInEvent.m
 //  Attendance
 //
-//  Created by Angelica Bato on 4/2/16.
+//  Created by Ariel Scott-Dicker on 4/10/16.
 //  Copyright © 2016 Angelica Bato. All rights reserved.
 //
 
-#import "FISStudentDM.h"
 #import "FISSignInEvent.h"
+#import "FISStudentDM.h"
 
-@implementation FISStudentDM
+@implementation FISSignInEvent
 
 // Insert code here to add functionality to your managed object subclass
 

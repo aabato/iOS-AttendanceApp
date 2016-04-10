@@ -1,20 +1,20 @@
 //
-//  FISSignInEvent+CoreDataProperties.m
+//  FISStudentDM+CoreDataProperties.m
 //  Attendance
 //
-//  Created by Angelica Bato on 4/2/16.
+//  Created by Ariel Scott-Dicker on 4/10/16.
 //  Copyright © 2016 Angelica Bato. All rights reserved.
 //
 //  Choose "Create NSManagedObject Subclass…" from the Core Data editor menu
 //  to delete and recreate this implementation file for your updated model.
 //
 
-#import "FISSignInEvent+CoreDataProperties.h"
+#import "FISStudentDM+CoreDataProperties.h"
 
-@implementation FISSignInEvent (CoreDataProperties)
+@implementation FISStudentDM (CoreDataProperties)
 
-@dynamic timeStamp;
-@dynamic isLate;
-@dynamic signInByUser;
+@dynamic firstName;
+@dynamic lastName;
+@dynamic studentSignIns;
 
 @end

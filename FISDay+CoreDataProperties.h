@@ -2,7 +2,7 @@
 //  FISDay+CoreDataProperties.h
 //  Attendance
 //
-//  Created by Angelica Bato on 4/2/16.
+//  Created by Ariel Scott-Dicker on 4/10/16.
 //  Copyright © 2016 Angelica Bato. All rights reserved.
 //
 //  Choose "Create NSManagedObject Subclass…" from the Core Data editor menu
@@ -15,23 +15,23 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface FISDay (CoreDataProperties)
 
-@property (nonatomic) NSTimeInterval date;
-@property (nullable, nonatomic, retain) NSSet<FISStudentDM *> *signedInStudents;
+@property (nullable, nonatomic, retain) NSDate *date;
 @property (nullable, nonatomic, retain) NSSet<FISStudentDM *> *nonSignedInStudents;
+@property (nullable, nonatomic, retain) NSSet<FISStudentDM *> *signedInStudents;
 
 @end
 
 @interface FISDay (CoreDataGeneratedAccessors)
 
-- (void)addSignedInStudentsObject:(FISStudentDM *)value;
-- (void)removeSignedInStudentsObject:(FISStudentDM *)value;
-- (void)addSignedInStudents:(NSSet<FISStudentDM *> *)values;
-- (void)removeSignedInStudents:(NSSet<FISStudentDM *> *)values;
-
 - (void)addNonSignedInStudentsObject:(FISStudentDM *)value;
 - (void)removeNonSignedInStudentsObject:(FISStudentDM *)value;
 - (void)addNonSignedInStudents:(NSSet<FISStudentDM *> *)values;
 - (void)removeNonSignedInStudents:(NSSet<FISStudentDM *> *)values;
+
+- (void)addSignedInStudentsObject:(FISStudentDM *)value;
+- (void)removeSignedInStudentsObject:(FISStudentDM *)value;
+- (void)addSignedInStudents:(NSSet<FISStudentDM *> *)values;
+- (void)removeSignedInStudents:(NSSet<FISStudentDM *> *)values;
 
 @end
 
