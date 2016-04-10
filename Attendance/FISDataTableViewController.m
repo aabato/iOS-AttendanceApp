@@ -15,7 +15,11 @@
 @implementation FISDataTableViewController
 
 - (void)viewDidLoad {
+    
+    NSLog(@"FIS Data Table View Controller Did Load");
+    
     [super viewDidLoad];
+    
     self.viewDidLoadCount = 1;
     FISStudentsDataStore *dataStore = [FISStudentsDataStore commonDataStore];
     [dataStore fetchData];

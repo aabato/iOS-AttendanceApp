@@ -16,16 +16,30 @@
 
 - (void)viewDidLoad {
     
-    if (self.viewDidLoadCount != 1) {
-        [super viewDidLoad];
-        FISStudentsDataStore *myStore = [FISStudentsDataStore commonDataStore];
-        [myStore fetchData];
-        [myStore saveContext];
-        self.students = [[myStore.day.nonSignedInStudents allObjects] mutableCopy];
-        self.signedInStudents = [[myStore.day.signedInStudents allObjects] mutableCopy];
+    [super viewDidLoad];
+    
+    NSLog(@"FIS Students View Did Load");
+    NSLog(@"Students View Did Load Count: %lu", self.viewDidLoadCount);
+
+    
+    
+    
+//    if (self.viewDidLoadCount != 1) {
+    self.sharedDataStore = [FISStudentsDataStore commonDataStore];
+    [self.sharedDataStore fetchData];
+    [self.sharedDataStore generateTestData];
+    [self.sharedDataStore saveContext];
+    
+    self.nonSignedInStudents = self.sharedDataStore.nonSignedInStudents;
+    
+    
+    
+
+
+//        self.students = [[myStore.day.nonSignedInStudents allObjects] mutableCopy];
+//        self.signedInStudents = [[myStore.day.signedInStudents allObjects] mutableCopy];
         
-        NSLog(@"mystore.students: %@, self.students :%@", [myStore.day.nonSignedInStudents allObjects], self.students);
-    }
+//        NSLog(@"mystore.students: %@, self.students :%@", [myStore.day.nonSignedInStudents allObjects], self.students);
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -41,13 +55,16 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.students.count;
+    return self.sharedDataStore.day.nonSignedInStudents.count;
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"basicCell" forIndexPath:indexPath];
+- (UITableViewCell *)tableView:(UITableView *)tableView
+         cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    FISStudentDM *studentAtRowOfIndexPath = self.students[indexPath.row];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"basicCell"
+                                                            forIndexPath:indexPath];
+    
+    FISStudentDM *studentAtRowOfIndexPath = self.nonSignedInStudents[indexPath.row];
     cell.textLabel.text = [NSString stringWithFormat:@"%@ %@", studentAtRowOfIndexPath.firstName, studentAtRowOfIndexPath.lastName];
     
     return cell;
@@ -97,7 +114,7 @@
         FISConfirmationViewController *destinationViewController = segue.destinationViewController;
         
         NSIndexPath *indexPathOfPressedRow = self.tableView.indexPathForSelectedRow;
-        FISStudentDM *studentAtPressedRow = self.students[indexPathOfPressedRow.row];
+        FISStudentDM *studentAtPressedRow = self.nonSignedInStudents[indexPathOfPressedRow.row];
 //        studentAtPressedRow.isSignedIn = YES;
         
         destinationViewController.firstNameOfSignedInStudent = studentAtPressedRow.firstName;

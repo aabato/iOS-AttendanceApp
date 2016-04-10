@@ -16,12 +16,15 @@
 @interface FISStudentsDataStore : NSObject
 
 @property (strong, nonatomic) FISDay *day;
+@property (strong, nonatomic) NSArray *days;
+@property (strong, nonatomic) NSArray *nonSignedInStudents;
 @property (readonly, strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 
--(void)saveContext;
--(void)fetchData;
--(NSURL *)applicationDocumentsDirectory;
+- (void)saveContext;
+- (void)fetchData;
+- (void)generateTestData;
+- (NSURL *)applicationDocumentsDirectory;
 
-+(instancetype)commonDataStore;
++ (instancetype)commonDataStore;
 
 @end

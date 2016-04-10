@@ -13,13 +13,17 @@
 
 -(void)generateTestData {
     
-    self.day = [NSEntityDescription insertNewObjectForEntityForName:@"FISDay" inManagedObjectContext:self.managedObjectContext];
+    NSLog(@"Generate Test Data in the data store .m");
+    
+    self.day = [NSEntityDescription insertNewObjectForEntityForName:@"FISDay"
+                                             inManagedObjectContext:self.managedObjectContext];
     
     FISStudentDM *angelica = [NSEntityDescription insertNewObjectForEntityForName:@"FISStudentDM" inManagedObjectContext:self.managedObjectContext];
     FISStudentDM *ariel = [NSEntityDescription insertNewObjectForEntityForName:@"FISStudentDM" inManagedObjectContext:self.managedObjectContext];
     FISStudentDM *rodrigo = [NSEntityDescription insertNewObjectForEntityForName:@"FISStudentDM" inManagedObjectContext:self.managedObjectContext];
     FISStudentDM *felix = [NSEntityDescription insertNewObjectForEntityForName:@"FISStudentDM" inManagedObjectContext:self.managedObjectContext];
     FISStudentDM *jeremy = [NSEntityDescription insertNewObjectForEntityForName:@"FISStudentDM" inManagedObjectContext:self.managedObjectContext];
+    
     angelica.firstName = @"Angelica";
     angelica.lastName = @"Bato";
     ariel.firstName = @"Ariel";
@@ -37,11 +41,8 @@
     [self.day addNonSignedInStudentsObject:felix];
     [self.day addNonSignedInStudentsObject:jeremy];
     
-//    [self.students addObject:angelica];
-//    [self.students addObject:ariel];
-//    [self.students addObject:rodrigo];
-//    [self.students addObject:felix];
-//    [self.students addObject:jeremy];
+    NSLog(@"In Generate Test Data: %@", self.day.nonSignedInStudents);
+    NSLog(@"In Generate Test Data: %lu", self.day.nonSignedInStudents.count);
     
     [self saveContext];
     [self fetchData];
@@ -100,16 +101,21 @@
 - (void)fetchData
 {
     NSFetchRequest *dayRequest = [NSFetchRequest fetchRequestWithEntityName:@"FISDay"];
+    NSFetchRequest *studentRequest = [NSFetchRequest fetchRequestWithEntityName:@"FISStudentDM"];
     
-    self.day = [[self.managedObjectContext executeFetchRequest:dayRequest
-                                                            error:nil] mutableCopy];
+    self.days = [self.managedObjectContext executeFetchRequest:dayRequest
+                                                          error:nil];
     
-    if (self.day.nonSignedInStudents.count == 0) {
-        [self generateTestData];
-    }
+    self.nonSignedInStudents = [self.managedObjectContext executeFetchRequest:studentRequest
+                                                                              error:nil];
+    
+//    if (self.day.nonSignedInStudents.count == 0) {
+//        [self generateTestData];
+//    }
 }
 
 +(instancetype)commonDataStore {
+    
     static FISStudentsDataStore *dataStore = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
